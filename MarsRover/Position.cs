@@ -44,5 +44,10 @@ namespace MarsRover
         {
             return string.Format("{0} {1}", _xPosition, _yPosition);
         }
+
+        public static Position operator+(Position lhs, Position rhs)
+        {
+            return new Position(lhs.X + rhs.X, lhs.Y + rhs.Y);
+        }
     }
 }
